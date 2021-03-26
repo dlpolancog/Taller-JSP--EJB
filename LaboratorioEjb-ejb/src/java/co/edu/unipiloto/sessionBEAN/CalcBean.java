@@ -40,21 +40,15 @@ public class CalcBean implements CalcBeanLocal {
     }
     
     @Override
-    public Integer elevarCuadrado(int val1) {
-        return (val1 * val1);
+    public Integer potencia(int val1, int val2) {
+        return (int) Math.pow(val1, val2);
     }
     
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
 
     
-
-    
-
-    
-
-    
-    
+   
     
     
 }

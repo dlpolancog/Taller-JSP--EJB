@@ -50,7 +50,7 @@ public class CalcServlet extends HttpServlet {
             int sum = 0;
             int val1, val2;
             String aux2 ="";
-            int index = 1;
+            int index = 0;
             for (int i = 0; i < tamaño; i++) {
                 if(ecuacion.charAt(i) == '+' || ecuacion.charAt(i) == '-' || ecuacion.charAt(i) == '*' || ecuacion.charAt(i) == '/' || ecuacion.charAt(i) == '%' || ecuacion.charAt(i) == '^')
                 {
@@ -68,7 +68,6 @@ public class CalcServlet extends HttpServlet {
             pos++;
             val1= Integer.parseInt(aux[0]) ;
             val2= Integer.parseInt(aux[1]) ;
-            out.println(operador[index]);
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -82,23 +81,23 @@ public class CalcServlet extends HttpServlet {
                 }
                 else
                     if(operador[i].equals("-")){
-                    out.println("<h1> suma = " + calcBean.restar(val1, val2) + "</h1>");
+                    out.println("<h1> resta = " + calcBean.restar(val1, val2) + "</h1>");
                     }
                 else
                         if(operador[i].equals("*")){
-                            out.println("<h1> suma = " + calcBean.multiplicar(val1, val2) + "</h1>");
+                            out.println("<h1> multipliación = " + calcBean.multiplicar(val1, val2) + "</h1>");
                         }
                 else
                             if(operador[i].equals("/")){
-                            out.println("<h1> suma = " + calcBean.dividir(val1, val2) + "</h1>");
+                            out.println("<h1> división = " + calcBean.dividir(val1, val2) + "</h1>");
                             }
                 else
                                 if(operador[i].equals("%")){
-                                    out.println("<h1> suma = " + calcBean.modulo(val1, val2) + "</h1>");
+                                    out.println("<h1> modulo = " + calcBean.modulo(val1, val2) + "</h1>");
                                 }
                 else
                                    if(operador[i].equals("^")){
-                                       out.println("<h1> suma = " + calcBean.elevarCuadrado(val1) + "</h1>");
+                                       out.println("<h1> potencia = " + calcBean.potencia(val1, val2) + "</h1>");
                                    }
             }
             

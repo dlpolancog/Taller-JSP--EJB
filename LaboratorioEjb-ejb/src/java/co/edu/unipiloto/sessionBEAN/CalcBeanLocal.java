@@ -24,6 +24,6 @@ public interface CalcBeanLocal {
 
     Integer modulo(int val1, int val2);
 
-    Integer elevarCuadrado(int val1);
+    Integer potencia(int val1, int val2);
     
 }
